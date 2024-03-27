@@ -1,0 +1,12 @@
+header{
+    font-family: "Shrikhand", serif;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    border-style: none;
+}
