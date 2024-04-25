@@ -1,0 +1,161 @@
+/* BOOK YOUR MEAL */
+/* h1{
+    font-weight: 1000;
+} */
+
+.explore {
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    padding: 10px 0px 30px 0px;
+    &__title {
+        font-size: 26px;
+    }
+    &__text {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 100;
+    }
+}
+
+
+/* HOW IT WORKS */
+.how-it-works {
+    margin: 50px 10px;
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+
+ol>li {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    align-items: center;
+    background-color: #F2F2F2;
+    padding: 10px 30px;
+    gap: 30px;
+    width: 250px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 15px;
+}
+
+.icon-circle {
+    color: white;
+    background-color: $main-color;
+    position: relative;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border-style: solid;
+}
+
+.icon-color {
+    color: $main-color;
+}
+
+ol>.how-it-works {
+    display: inline-block;
+    padding: 5px;
+    color: #F6F6F6;
+    background-color: $main-color;
+    border-radius: 30%;
+}
+
+/* RESTAURANT CARDS */
+.restaurants {
+    width: 100%;
+    background-color: #F6F6F6;
+    padding-top: 30px;
+    margin-top: 70px;
+}
+
+.restaurants h2 {
+    margin-left: 20px;
+}
+
+.cards {
+    margin-top: 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    gap: 15px;
+    align-items: center;
+}
+
+.card {
+    display: block;
+    padding-top: 0;
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    width: 300px;
+    height: 225px;
+    text-decoration: none;
+    color: #353535;
+    flex: 1;
+    position: relative;
+
+    &__image {
+        width: 100%;
+        height: 150px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+        }
+    }
+}
+
+.card__body h3 {
+    margin: 10px 15px;
+}
+
+.card__body p {
+    margin: 0px 10px 15px 15px;
+    font-weight: 100;
+}
+
+.heart {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    padding-right: 15px;
+    &--full {
+        padding-left:15px;
+        color: linear-gradient($second-color, $main-color);
+    }
+}
+
+.new {
+    position: absolute;
+    left: 200px;
+    bottom: 155px;
+    width: 40px;
+    padding: 10px 20px;
+    border-style: none;
+    border-radius: 2px;
+    background-color: $third-color;
+    color: green;
+}

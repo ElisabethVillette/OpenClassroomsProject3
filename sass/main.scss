@@ -1,5 +1,14 @@
 @import 'utils/variables';
 @import 'utils/mixins';
+
+@import 'base/typography';
+
+@import 'components/buttons';
+
+@import 'layouts/header';
+@import 'layouts/grid';
+@import 'layouts/footer';
+
 @import 'pages/home';
 @import 'pages/restaurant';
 
