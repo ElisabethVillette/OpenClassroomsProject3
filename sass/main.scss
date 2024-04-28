@@ -6,26 +6,8 @@
 @import 'components/buttons';
 
 @import 'layouts/header';
-@import 'layouts/grid';
 @import 'layouts/footer';
 
 @import 'pages/home';
 @import 'pages/restaurant';
 
-@include desktop-only {
-    .how-it-works {
-        display: flex;
-        flex: row wrap;
-        width: 100%
-    }
-
-    .restaurants {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .icon-circle {
-        position: relative;
-        left: 50px;
-    }
-}

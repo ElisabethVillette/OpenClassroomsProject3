@@ -20,7 +20,7 @@
 
 <body>
   <header class="logo">
-      <img class= logo__image src="./public/images/logo/ohmyfood.png" alt="Logo">
+      <img class=logo__image src="./public/images/logo/ohmyfood.png" alt="Logo">
   </header>
   <div class="location">
     <i class="fa-solid fa-location-dot dot"></i>
@@ -30,9 +30,9 @@
   <section class="explore">
     <h1 class="explore__title">Book the meal you want</h1>
     <p class="explore__text">Discover our carefully selected high-end restaurants</p>
-    <button>
+    <a class="explore-button" href="#">
       Explore our restaurants
-    </button>
+    </a>
   </section>
 
   <div class="how-it-works">
@@ -41,17 +41,17 @@
       <li>
         <div class="icon-circle">1</div>
         <i class=" fa-solid fa-mobile-screen icon"></i>
-          <p>Choose a restaurant</p>
+        <p>Choose a restaurant</p>
       </li>
       <li>
         <div class="icon-circle">2</div>
         <i class=" fa-solid fa-list icon"></i>
-          <p>Build your meal</p>
+        <p>Build your meal</p>
       </li>
       <li>
         <div class="icon-circle">3</div>
         <i class=" fa-solid fa-store icon-color"></i>
-          <p>Enjoy your meal at the restaurant</p>
+        <p>Enjoy your meal at the restaurant</p>
       </li>
     </ol>
   </div>
@@ -61,12 +61,16 @@
     <div class="cards">
       <a class="card" href="#">
         <p class="new">New</p>
-        <img class="card__image" src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Kitchen West">
+        <img class="card__image" src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt="Kitchen West">
         <div class="card__body">
           <h3>Kitchen West</h3>
           <p>Angel</p>
         </div>
-        <i class="fa-regular fa-heart heart"></i>
+        <div class="heart">
+          <i class="fa-regular fa-heart heart__empty"></i>
+          <i class="fa-solid fa-heart heart__full"></i>
+        </div>
       </a>
       <a class="card" href="#">
         <p class="new">New</p>
@@ -75,7 +79,10 @@
           <h3>Elderflower</i></h3>
           <p>Old Street</p>
         </div>
-        <i class="fa-regular fa-heart heart--full"></i>
+        <div class="heart">
+          <i class="fa-regular fa-heart heart__empty"></i>
+          <i class="fa-solid fa-heart heart__full"></i>
+        </div>
       </a>
       <a class="card" href="#">
         <img class="card__image" src="public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Shoreditch">
@@ -83,15 +90,22 @@
           <h3>Shoreditch Canteen</h3>
           <p>Shoreditch</p>
         </div>
-        <i class="fa-regular fa-heart heart"></i>
+        <div class="heart">
+          <i class="fa-regular fa-heart heart__empty"></i>
+          <i class="fa-solid fa-heart heart__full"></i>
+        </div>
       </a>
       <a class="card" href="#">
-        <img class="card__image" src="public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="The Bay Leaf">
+        <img class="card__image" src="public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+          alt="The Bay Leaf">
         <div class="card__body">
           <h3>The Bay Leaf</h3>
           <p>Hoxton</p>
         </div>
-        <i class="fa-regular fa-heart heart"></i>
+        <div class="heart">
+          <i class="fa-regular fa-heart heart__empty"></i>
+          <i class="fa-solid fa-heart heart__full"></i>
+        </div>
       </a>
     </div>
   </section>

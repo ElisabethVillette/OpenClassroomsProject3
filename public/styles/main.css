@@ -8,15 +8,18 @@
     font-weight: 400;
     font-style: normal;
   } */
-.explore button {
-  padding: 15px;
-  width: 218px;
-  height: 50px;
+.explore-button {
+  padding: 15px 25px;
   border-radius: 70px;
   border-style: none;
+  text-decoration: none;
   background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.explore-button:hover {
+  background-image: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -28,6 +31,56 @@
 }
 .logo__image {
   width: 200px;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer h2 {
+  font-family: "Shrikhand", serif;
+  margin-left: 40px;
+  line-height: 15px;
+  padding-top: 15px;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+footer li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 4px;
+  gap: 10px;
+  margin: 0;
+}
+
+/* LOCATION */
+.location {
+  background-color: #EAEAEA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-style: none;
+  gap: 15px;
+}
+
+.dot {
+  color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4%;
+  height: 50px;
 }
 
 /* BOOK YOUR MEAL */
@@ -45,6 +98,7 @@
 }
 .explore__title {
   font-size: 26px;
+  font-weight: 500;
 }
 .explore__text {
   font-size: 20px;
@@ -65,6 +119,7 @@ ol {
 
 ol > li {
   display: flex;
+  position: relative;
   flex-direction: row;
   border-radius: 20px;
   align-items: center;
@@ -86,13 +141,16 @@ ol > li {
 
 .icon-circle {
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #9356DC;
-  position: relative;
+  position: absolute;
+  left: -15px;
   width: 0.5rem;
   height: 0.5rem;
   padding: 0.5rem;
   border-radius: 50%;
-  border-style: solid;
 }
 
 .icon-color {
@@ -166,13 +224,28 @@ ol > .how-it-works {
 
 .heart {
   position: absolute;
-  right: 0;
-  bottom: 25px;
+  right: 30px;
+  bottom: 40px;
   padding-right: 15px;
 }
-.heart--full {
+.heart__empty {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.heart__full {
+  position: absolute;
+  left: -15px;
+  top: 0;
   padding-left: 15px;
-  color: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.heart__full:hover {
+  opacity: 1;
 }
 
 .new {
@@ -187,56 +260,6 @@ ol > .how-it-works {
   color: green;
 }
 
-footer {
-  background-color: #353535;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-footer h2 {
-  font-family: "Shrikhand", serif;
-  margin-left: 40px;
-  line-height: 15px;
-  padding-top: 15px;
-}
-
-footer ul {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-footer li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  line-height: 4px;
-  gap: 10px;
-  margin: 0;
-}
-
-/* LOCATION */
-.location {
-  background-color: #EAEAEA;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-style: none;
-  gap: 15px;
-}
-
-.dot {
-  color: #353535;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4%;
-  height: 50px;
-}
-
 @media screen and (min-width: 992px) {
   .how-it-works {
     display: flex;
@@ -246,10 +269,6 @@ footer li {
   .restaurants {
     display: flex;
     flex-direction: row;
-  }
-  .icon-circle {
-    position: relative;
-    left: 50px;
   }
 }
 
