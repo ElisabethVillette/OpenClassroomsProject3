@@ -46,12 +46,26 @@ footer h2 {
   line-height: 15px;
   padding-top: 15px;
 }
+@media screen and (min-width: 992px) {
+  footer h2 {
+    position: absolute;
+    right: 25px;
+    padding: 50px;
+  }
+}
 
 footer ul {
   display: flex;
   flex-direction: column;
   margin: 0;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  footer ul {
+    flex-direction: row;
+    margin-top: 60px;
+    padding-left: 400px;
+  }
 }
 
 footer li {
@@ -61,6 +75,12 @@ footer li {
   line-height: 4px;
   gap: 10px;
   margin: 0;
+}
+@media screen and (min-width: 992px) {
+  footer li {
+    gap: 10px;
+    padding-right: 20px;
+  }
 }
 
 /* LOCATION */
@@ -121,6 +141,14 @@ ol {
   flex-direction: column;
   padding: 0;
 }
+@media screen and (min-width: 992px) {
+  ol {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 40px;
+  }
+}
 
 ol > li {
   display: flex;
@@ -177,12 +205,6 @@ ol > .how-it-works {
   padding-top: 30px;
   margin-top: 70px;
 }
-@media screen and (min-width: 992px) {
-  .restaurants {
-    display: flex;
-    flex-direction: row;
-  }
-}
 
 .restaurants h2 {
   margin-left: 20px;
@@ -196,6 +218,13 @@ ol > .how-it-works {
   padding-bottom: 30px;
   gap: 15px;
   align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
 }
 
 .card {
