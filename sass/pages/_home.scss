@@ -6,7 +6,7 @@
     justify-content: center;
     border-style: none;
     gap: 15px;
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0px -3px 3px 0px #ccc;
 }
 
 .dot {
@@ -19,9 +19,9 @@
 }
 
 /* BOOK YOUR MEAL */
-h1{
+h1 {
     font-weight: 1000;
-} 
+}
 
 .explore {
     background-color: #F6F6F6;
@@ -47,172 +47,203 @@ h1{
 /* HOW IT WORKS */
 .how-it-works {
     margin: 50px 10px;
-    }
 
-    ol {
+    &__title {
         display: flex;
         flex-direction: column;
-        padding: 0;
     }
+}
 
+ol {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 
-    ol>li {
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        border-radius: 20px;
-        align-items: center;
-        background-color: #F2F2F2;
-        padding: 10px 30px;
-        gap: 30px;
-        width: 250px;
-        margin-top: 20px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-    }
-
-    .icon {
-        color: grey;
+    @mixin desktop-only {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        height: 15px;
+        padding: 20px;
     }
+}
 
-    .icon-circle {
-        color: white;
+
+ol>li {
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    align-items: center;
+    background-color: #F2F2F2;
+    padding: 10px 30px;
+    gap: 30px;
+    width: 250px;
+    height: 60px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
+    @mixin desktop-only {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $main-color;
-        position: absolute;
-        left: -15px;
-        width: 0.5rem;
-        height: 0.5rem;
-        padding: 0.5rem;
-        border-radius: 50%;
+        flex-direction: row;
+        padding: 20px;
     }
+}
 
-    .icon-color {
-        color: $main-color;
-    }
+.icon {
+    color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 15px;
+}
 
-    ol>.how-it-works {
-        display: inline-block;
-        padding: 5px;
-        color: #F6F6F6;
-        background-color: $main-color;
-        border-radius: 30%;
-    }
+.icon-circle {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-color;
+    position: absolute;
+    left: -15px;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
 
-    /* RESTAURANT CARDS */
-    .restaurants {
-        width: 100%;
-        background-color: #F6F6F6;
-        padding-top: 30px;
-        margin-top: 70px;
-    }
+.icon-color {
+    color: $main-color;
+}
 
-    .restaurants h2 {
-        margin-left: 20px;
-    }
+ol>.how-it-works {
+    display: inline-block;
+    padding: 5px;
+    color: #F6F6F6;
+    background-color: $main-color;
+    border-radius: 30%;
 
-    .cards {
-        margin-top: 33px;
+    @mixin desktop-only {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-bottom: 30px;
-        gap: 15px;
-        align-items: center;
+        flex-direction: row;
+        padding: 20px;
     }
+}
 
-    .card {
-        display: block;
-        padding-top: 0;
-        background-color: white;
-        border-radius: 20px;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-        width: 300px;
-        height: 225px;
-        text-decoration: none;
-        color: #353535;
-        flex: 1;
-        position: relative;
-
-        &__image {
-            width: 100%;
-            height: 150px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            object-fit: cover;
-
-            &__body {
-                display: flex;
-                flex-direction: column;
-                margin: 15px;
-            }
-        }
-    }
-
-    .card__body h3 {
-        margin: 10px 15px;
-    }
-
-    .card__body p {
-        margin: 0px 10px 15px 15px;
-        font-weight: 100;
-    }
-
-    .heart {
-        position: absolute;
-        right: 30px;
-        bottom: 40px;
-        padding-right: 15px;
-
-        &__empty {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        &__full {
-            position: absolute;
-            left: -15px;
-            top: 0;
-            padding-left: 15px;
-            background-image: linear-gradient($second-color, $main-color);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            opacity: 0;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }
-
-    .new {
-        position: absolute;
-        left: 200px;
-        bottom: 155px;
-        width: 40px;
-        padding: 10px 20px;
-        border-style: none;
-        border-radius: 2px;
-        background-color: $third-color;
-        color: green;
-    }
+/* RESTAURANT CARDS */
+.restaurants {
+    width: 100%;
+    background-color: #F6F6F6;
+    padding-top: 30px;
+    margin-top: 70px;
 
     @include desktop-only {
-        .how-it-works {
-            display: flex;
-            flex: row wrap;
-            width: 100%
-        }
+        display: flex;
+        flex-direction: row;
+    }
+}
 
-        .restaurants {
+.restaurants h2 {
+    margin-left: 20px;
+}
+
+.cards {
+    margin-top: 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    gap: 15px;
+    align-items: center;
+}
+
+.card {
+    display: block;
+    padding-top: 0;
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    width: 300px;
+    height: 225px;
+    text-decoration: none;
+    color: #353535;
+    flex: 1;
+    position: relative;
+
+    &__image {
+        width: 100%;
+        height: 150px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+
+        &__body {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            margin: 15px;
         }
     }
+}
+
+.card__body h3 {
+    margin: 10px 15px;
+}
+
+.card__body p {
+    margin: 0px 10px 15px 15px;
+    font-weight: 100;
+}
+
+.heart {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 30px;
+    bottom: 40px;
+    padding-right: 15px;
+
+    &__empty {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__full {
+        position: absolute;
+        left: -15px;
+        top: 0;
+        padding-left: 15px;
+        background-image: linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+
+        // &:hover {
+        //     opacity: 1;
+        //     transform: scale(2);
+        // }
+    }
+}
+
+
+.heart {
+    &:hover + .heart__full {
+        transform: scaleX(2);
+        opacity: 1;
+    }
+}
+
+.heart__full {
+    transition: transform 2000ms ease-in;
+}
+
+
+.new {
+    position: absolute;
+    left: 200px;
+    bottom: 155px;
+    width: 40px;
+    padding: 10px 20px;
+    border-style: none;
+    border-radius: 2px;
+    background-color: $third-color;
+    color: green;
+}

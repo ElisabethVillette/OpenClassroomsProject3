@@ -27,7 +27,6 @@
   display: flex;
   justify-content: center;
   padding: 20px;
-  box-shadow: 0px 10px rgba(0, 0, 0, 0.2);
 }
 .logo__image {
   width: 200px;
@@ -72,6 +71,7 @@ footer li {
   justify-content: center;
   border-style: none;
   gap: 15px;
+  box-shadow: 0px -3px 3px 0px #ccc;
 }
 
 .dot {
@@ -84,9 +84,10 @@ footer li {
 }
 
 /* BOOK YOUR MEAL */
-/* h1{
-    font-weight: 1000;
-} */
+h1 {
+  font-weight: 1000;
+}
+
 .explore {
   background-color: #F6F6F6;
   display: flex;
@@ -110,6 +111,10 @@ footer li {
 .how-it-works {
   margin: 50px 10px;
 }
+.how-it-works__title {
+  display: flex;
+  flex-direction: column;
+}
 
 ol {
   display: flex;
@@ -120,13 +125,13 @@ ol {
 ol > li {
   display: flex;
   position: relative;
-  flex-direction: row;
   border-radius: 20px;
   align-items: center;
   background-color: #F2F2F2;
   padding: 10px 30px;
   gap: 30px;
   width: 250px;
+  height: 60px;
   margin-top: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
@@ -171,6 +176,12 @@ ol > .how-it-works {
   background-color: #F6F6F6;
   padding-top: 30px;
   margin-top: 70px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .restaurants h2 {
@@ -224,6 +235,8 @@ ol > .how-it-works {
 
 .heart {
   position: absolute;
+  width: 60px;
+  height: 60px;
   right: 30px;
   bottom: 40px;
   padding-right: 15px;
@@ -244,8 +257,14 @@ ol > .how-it-works {
   color: transparent;
   opacity: 0;
 }
-.heart__full:hover {
+
+.heart:hover + .heart__full {
+  transform: scaleX(2);
   opacity: 1;
+}
+
+.heart__full {
+  transition: transform 2000ms ease-in;
 }
 
 .new {
@@ -258,18 +277,6 @@ ol > .how-it-works {
   border-radius: 2px;
   background-color: #99E2D0;
   color: green;
-}
-
-@media screen and (min-width: 992px) {
-  .how-it-works {
-    display: flex;
-    flex: row wrap;
-    width: 100%;
-  }
-  .restaurants {
-    display: flex;
-    flex-direction: row;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
