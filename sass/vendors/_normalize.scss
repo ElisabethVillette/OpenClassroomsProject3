@@ -1,0 +1,389 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    min-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+li {
+    list-style: none;
+    display: inline;
+    padding-top: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    flex: 1;
+    cursor: pointer;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.card-title-accommodation {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 5px;
+    margin: 0;
+}
+
+
+/****** Navigation ***********/
+.container {
+    border: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    width: 5%;
+    object-fit: contain;
+    padding-left: 50px;
+}
+
+nav {
+    background-color: white;
+    text-align: right;
+}
+
+nav ul {
+    padding: 0px;
+    padding-top: 24px;
+    margin-top: 0px;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    padding-top: 30px;
+    margin: 0px 20px;
+}
+
+nav li:hover {
+    border-top: 2px solid #0065FC;
+}
+
+nav a:hover {
+    color: #0065FC;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-left: 40px;
+    font-size: 22px;
+}
+
+/****** Search button ***********/
+.main-container {
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    margin-top: 2em;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+form i.fa-solid {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #F2F2F2;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4%;
+    height: 50px;
+}
+
+#City {
+    background-color: white;
+    border: 2px solid #F2F2F2;
+    width: 100px;
+    font-weight: bold;
+    font-size: medium;
+    padding: 15px 20px 14px 20px;
+    margin-right: -2px;
+    margin-left: -2px;
+    height: 17px;
+}
+
+#Search {
+    width: 100px;
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-weight: bold;
+    font-size: medium;
+    padding: 15px 20px;
+}
+
+
+/****** Filter ***********/
+.button {
+    font-weight: bold;
+    margin: 5px 5px;
+    padding: 15px 20px;
+    background-color: white;
+    border: 3px solid #F2F2F2;
+    border-radius: 30px;
+}
+
+.button:hover {
+    background-color: #DEEBFF;
+}
+
+.filters {
+    padding: 30px 30px;
+    padding-inline-start: 0%;
+}
+
+.filters li {
+    cursor: default;
+}
+
+.filters i {
+    margin-right: 10px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+/****** Accommodation And Popular ***********/
+.accommodation-and-popular {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 3%;
+}
+
+.accommodation-and-popular section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+.empty-star {
+    color: #F2F2F2;
+}
+
+.neutralStar {
+    color: var(--main-bg-color)
+}
+
+/****** Accommodation ***********/
+.accommodation {
+    width: 65%;
+}
+
+.accommodation-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accommodation-cards {
+    margin-top: 33px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    gap: 15px;
+}
+
+.card-acc {
+    padding: 10px 0px;
+    line-height: 0.5em;
+    padding-left: 10px;
+}
+
+.card-text {
+    padding: 0px;
+}
+
+.accommodation-cards img {
+    width: 100%;
+    height: 120px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.card-link {
+    display: block;
+    padding-top: 0;
+}
+
+.card-accommodation {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    width: 250px;
+    height: 210px;
+}
+
+.show-more {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/****** Popular ***********/
+.popular {
+    width: 32%;
+    height: 630px;
+}
+
+.popular-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.popular-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.popular-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.popular-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.popular-cards .card-subtitle {
+    margin: 0;
+}
+
+.popular-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/****** Things to Do in Paris ***********/
+.to-do {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+}
+
+.to-do-cards {
+    margin-top: 33px;
+    margin-bottom: 33px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    object-fit: cover;
+}
+
+.to-do-cards img {
+    width: 100%;
+    height: 400px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.card-to-do {
+    background-color: white;
+    flex: 1;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.to-do h2 {
+    margin-top: 50px;
+    margin-bottom: -10px;
+}
+
+.to-do h3 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+
+/****** Footer ***********/
+footer {
+    background-color: var(--main-bg-color);
+    display: flex;
+    box-sizing: border-box;
+    height: 180px;
+    margin: 10px 30px;
+}
+
+.footer-column {
+    flex: 1;
+    padding-left: 20px;
+}
+
+h5 {
+    font-weight: 200;
+}
