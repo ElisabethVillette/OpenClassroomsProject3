@@ -12,3 +12,22 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     }
 }
+
+.order-button {
+    padding: 15px 25px;
+    border-radius: 70px;
+    border-style: none;
+    text-decoration: none;
+    background-image: linear-gradient($second-color, $main-color);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    height: 20px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+        background-image: linear-gradient(lighten($second-color, 5%), lighten($main-color, 5%));
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+}

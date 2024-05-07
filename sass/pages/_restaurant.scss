@@ -1,0 +1,106 @@
+.back {
+    position: relative;
+    right: 50px;
+    top: 10px;
+    font-size: 20px;
+}
+
+.corazon {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    right: 30px;
+    top: 310px;
+    padding-right: 15px;
+    font-size: 24px;
+    border-width: 1px;
+
+    &__empty {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__full {
+        position: absolute;
+        left: -15px;
+        top: 0;
+        padding-left: 15px;
+        background-image: linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transition: opacity 500ms cubic-bezier(.17,.67,.83,.67);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.menu {
+    background-color: $background-color;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        inset: 4px 8px;
+    }
+
+    &__title {
+        font-family: "Shrikhand", serif;
+    }
+}
+
+.category__title {
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 1px;
+        bottom: -5px;
+        border-bottom: 3px solid $third-color;
+    }
+}
+
+.item {
+    margin-bottom: 20px;
+    display: block;
+    background-color: white;
+    border-radius: 15px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
+    text-decoration: none;
+    color: #353535;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    width: 90%;
+
+    &__title {
+        font-weight: 600;
+    }
+
+    &__content {
+        font-weight: 200;
+    }
+
+    &__price {
+        font-weight: 500;
+        position: absolute;
+        right: 40px;
+        top: 30px;
+    }
+}

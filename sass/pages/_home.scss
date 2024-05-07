@@ -71,8 +71,9 @@ ol {
     @include desktop-only {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         gap: 40px;
-        margin-left: 100px;
+        // margin-left: 100px;
     }
 }
 
@@ -155,7 +156,9 @@ ol>.how-it-works {
 
     @include desktop-only {
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: center;
+        width: 80%;
+        gap: 50px;
     }
 }
 
