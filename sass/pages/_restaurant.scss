@@ -82,11 +82,23 @@
     }
 }
 
-.category {
+.starters, .mains, .desserts {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.starters{
+    animation: transitionIn 100ms;
+}
+
+.mains{
+    animation: transitionIn 600ms;
+}
+
+.desserts{
+    animation: transitionIn 1400ms;
 }
 
 .category__title {
