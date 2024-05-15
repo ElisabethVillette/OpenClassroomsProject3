@@ -8,12 +8,22 @@
   }
   24% {
     transform: scaleY(0.4);
+    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
   }
   46% {
     transform: scaleY(0.81);
+    animation-timing-function: cubic-bezier(0.25, 0.25, 1);
   }
   100% {
     transform: scaleY(1);
+  }
+}
+@keyframes clickSelect {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
 body {
@@ -390,27 +400,23 @@ ol > .how-it-works {
   font-size: 20px;
 }
 
-.corazon {
-  position: absolute;
-  width: 60px;
-  height: 20px;
-  right: 30px;
-  top: 310px;
-  padding-right: 15px;
-  font-size: 24px;
+.heading {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.heart-heading {
+  position: relative;
+  font-size: 26px;
   border-width: 1px;
 }
-@media screen and (min-width: 992px) {
-  .corazon {
-    right: 300px;
-  }
-}
-.corazon__empty {
+.heart-heading__empty {
   position: absolute;
   left: 0;
   top: 0;
 }
-.corazon__full {
+.heart-heading__full {
   position: absolute;
   left: -15px;
   top: 0;
@@ -422,10 +428,14 @@ ol > .how-it-works {
   opacity: 0;
   transition: opacity 500ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
-.corazon__full:hover {
+.heart-heading__full:hover {
   opacity: 1;
 }
 
+.menu-and-blank {
+  position: relative;
+  top: -50px;
+}
 @media screen and (min-width: 992px) {
   .menu-and-blank {
     display: flex;
@@ -447,6 +457,7 @@ ol > .how-it-works {
   border-top-right-radius: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 10px;
 }
 @media screen and (min-width: 992px) {
@@ -458,6 +469,8 @@ ol > .how-it-works {
 }
 .menu__title {
   font-family: "Shrikhand", serif;
+  font-size: 26px;
+  margin: 0;
 }
 @media screen and (min-width: 992px) {
   .menu__title {
@@ -466,23 +479,23 @@ ol > .how-it-works {
   }
 }
 
-.starters, .mains, .desserts {
+.category {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.starters {
-  animation: transitionIn 100ms;
+.category:nth-child(1) {
+  animation: transitionIn 500ms 100ms;
 }
 
-.mains {
-  animation: transitionIn 600ms;
+.category:nth-child(2) {
+  animation: transitionIn 1500ms 200ms;
 }
 
-.desserts {
-  animation: transitionIn 1400ms;
+.category:nth-child(3) {
+  animation: transitionIn 2000ms 300ms;
 }
 
 .category__title {
@@ -509,7 +522,7 @@ ol > .how-it-works {
 
 .item {
   margin-bottom: 20px;
-  display: block;
+  display: flex;
   background-color: white;
   border-radius: 15px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
@@ -518,26 +531,48 @@ ol > .how-it-works {
   margin: 10px;
   padding: 10px;
   width: 90%;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
 }
 @media screen and (min-width: 992px) {
   .item {
     width: 500px;
+    height: 40px;
   }
+}
+.item__text {
+  display: flex;
+  flex-direction: column;
 }
 .item__title {
   font-weight: 600;
+  margin: 0;
 }
 .item__content {
   font-weight: 200;
+  line-height: 0;
 }
 .item__price {
   font-weight: 500;
   position: absolute;
-  right: 40px;
+  right: 20px;
   top: 30px;
 }
-
-.selection__mark {
+.item .selection {
+  background-color: #99E2D0;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+.item .selection__mark {
   color: #99E2D0;
   display: flex;
   justify-content: center;
@@ -550,6 +585,12 @@ ol > .how-it-works {
   height: 0.5rem;
   padding: 0.5rem;
   border-radius: 50%;
+  overflow: hidden;
+}
+
+.item:hover .selection {
+  animation: clickSelect 5s linear forwards;
+  display: block;
 }
 
 /*# sourceMappingURL=pages.css.map */

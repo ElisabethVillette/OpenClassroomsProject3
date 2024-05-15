@@ -5,19 +5,18 @@
     font-size: 20px;
 }
 
-.corazon {
-    position: absolute;
-    width: 60px;
-    height: 20px;
-    right: 30px;
-    top: 310px;
-    padding-right: 15px;
-    font-size: 24px;
-    border-width: 1px;
+.heading{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
 
-    @include desktop-only {
-        right: 300px;
-    }
+.heart-heading {
+    position: relative;
+    // width: 60px;
+    // height: 20px;
+    font-size: 26px;
+    border-width: 1px;
 
     &__empty {
         position: absolute;
@@ -44,6 +43,9 @@
 }
 
 .menu-and-blank {
+    position: relative;
+    top: -50px;
+
     @include desktop-only {
         display: flex;
         justify-content: center;
@@ -64,6 +66,7 @@
     border-top-right-radius: 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 10px;
 
     @include desktop-only {
@@ -74,6 +77,8 @@
 
     &__title {
         font-family: "Shrikhand", serif;
+        font-size: 26px;
+        margin: 0;
 
         @include desktop-only {
             display: flex;
@@ -82,23 +87,23 @@
     }
 }
 
-.starters, .mains, .desserts {
+.category {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.starters{
-    animation: transitionIn 100ms;
+.category:nth-child(1){
+    animation: transitionIn 500ms 100ms;
 }
 
-.mains{
-    animation: transitionIn 600ms;
+.category:nth-child(2) {
+    animation: transitionIn 1500ms 200ms;
 }
 
-.desserts{
-    animation: transitionIn 1400ms;
+.category:nth-child(3) {
+    animation: transitionIn 2000ms 300ms;
 }
 
 .category__title {
@@ -125,56 +130,78 @@
 
 .item {
     margin-bottom: 20px;
-    display: block;
+    display: flex;
     background-color: white;
     border-radius: 15px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
     text-decoration: none;
     color: #353535;
-    // position: relative;
     margin: 10px;
     padding: 10px;
     width: 90%;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
 
     @include desktop-only {
         width: 500px;
+        height: 40px;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
     }
 
     &__title {
         font-weight: 600;
+        margin: 0;
     }
 
     &__content {
         font-weight: 200;
+        line-height: 0;
     }
 
     &__price {
         font-weight: 500;
         position: absolute;
-        right: 40px;
+        right: 20px;
         top: 30px;
     }
+
+    .selection {
+        background-color: $third-color;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+    
+        &__mark {
+            color: $third-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            width: 0.5rem;
+            height: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }    
 }
 
-.selection {
-    // background-color: $third-color;
-    // border-top-left-radius: 30px;
-    // border-top-right-radius: 30px;
-    // display: flex;
-    // flex-direction: row;
-
-    &__mark {
-        color: $third-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        width: 0.5rem;
-        height: 0.5rem;
-        padding: 0.5rem;
-        border-radius: 50%;
-    }
+.item:hover .selection {
+    animation: clickSelect 5s linear forwards;
+    display: block;
 }
