@@ -33,6 +33,16 @@
     }
 }
 
+@keyframes movePrice {
+    from {
+        right: 20px;
+    }
+
+    to {
+        right: 60px;
+    }
+}
+
 @keyframes spin {
     from {
         transform: rotate(0turn);

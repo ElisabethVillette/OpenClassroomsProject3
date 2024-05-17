@@ -26,6 +26,14 @@
     width: 60px;
   }
 }
+@keyframes movePrice {
+  from {
+    right: 20px;
+  }
+  to {
+    right: 60px;
+  }
+}
 @keyframes spin {
   from {
     transform: rotate(0turn);
@@ -620,8 +628,8 @@ ol > .how-it-works {
   border-radius: 50%;
 }
 
-.item__price:hover {
-  right: -60px;
+.item:hover .item__price {
+  animation: movePrice 1s forwards;
 }
 
 .item:hover .selection {

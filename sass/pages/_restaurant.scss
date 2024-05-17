@@ -202,8 +202,8 @@
     }    
 }
 
-.item__price:hover {
-    right: -60px;
+.item:hover .item__price {
+    animation: movePrice 1s forwards;
 }
 
 .item:hover .selection {
