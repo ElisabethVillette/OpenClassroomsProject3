@@ -1,3 +1,20 @@
+.loader{
+    border: 16px solid $background-color; 
+    border-top: 16px solid $main-color; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.back:active + .loader::after{
+    display: block;
+    animation: spin 2s linear infinite;
+}
+
 /* LOCATION */
 .location {
     background-color: #EAEAEA;

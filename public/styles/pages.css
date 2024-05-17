@@ -12,18 +12,26 @@
   }
   46% {
     transform: scaleY(0.81);
-    animation-timing-function: cubic-bezier(0.25, 0.25, 1);
+    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
   }
   100% {
     transform: scaleY(1);
   }
 }
 @keyframes clickSelect {
-  0% {
+  from {
     width: 0;
   }
-  100% {
-    width: 100%;
+  to {
+    width: 60px;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
   }
 }
 body {
@@ -134,6 +142,28 @@ footer li {
   height: 16px;
   width: 10px;
   padding-right: 5px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.loader {
+  border: 16px solid #F6F6F6;
+  border-top: 16px solid #9356DC;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.back:active + .loader::after {
+  display: block;
+  animation: spin 2s linear infinite;
 }
 
 /* LOCATION */
@@ -486,15 +516,15 @@ ol > .how-it-works {
   align-items: center;
 }
 
-.category:nth-child(1) {
+.category:nth-child(2) {
   animation: transitionIn 500ms 100ms;
 }
 
-.category:nth-child(2) {
+.category:nth-child(3) {
   animation: transitionIn 1500ms 200ms;
 }
 
-.category:nth-child(3) {
+.category:nth-child(4) {
   animation: transitionIn 2000ms 300ms;
 }
 
@@ -529,22 +559,22 @@ ol > .how-it-works {
   text-decoration: none;
   color: #353535;
   margin: 10px;
-  padding: 10px;
+  position: relative;
   width: 90%;
-  height: 40px;
-  display: flex;
+  height: 70px;
   flex-wrap: wrap;
   justify-content: start;
+  overflow: hidden;
 }
 @media screen and (min-width: 992px) {
   .item {
     width: 500px;
-    height: 40px;
   }
 }
 .item__text {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 .item__title {
   font-weight: 600;
@@ -559,18 +589,20 @@ ol > .how-it-works {
   position: absolute;
   right: 20px;
   top: 30px;
+  padding: 10px;
 }
 .item .selection {
   background-color: #99E2D0;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   right: 0;
-  bottom: 0;
-  display: none;
+  opacity: 0;
 }
 .item .selection__mark {
   color: #99E2D0;
@@ -578,19 +610,14 @@ ol > .how-it-works {
   justify-content: center;
   align-items: center;
   background-color: white;
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 0.5rem;
-  height: 0.5rem;
-  padding: 0.5rem;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  overflow: hidden;
 }
 
 .item:hover .selection {
-  animation: clickSelect 5s linear forwards;
-  display: block;
+  animation: clickSelect 1s forwards;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=pages.css.map */
