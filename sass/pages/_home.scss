@@ -1,19 +1,23 @@
-.loader{
-    border: 16px solid $background-color; 
-    border-top: 16px solid $main-color; 
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
+.spinner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // background-color: #EAEAEA;
 }
 
-.back:active + .loader::after{
-    display: block;
-    animation: spin 2s linear infinite;
+.spinner {
+    border: 16px dashed $background-color; 
+    border-top: 16px dashed $main-color; 
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    animation: spin 3s linear 2;
 }
+
+// #spinner-hidden {
+//     animation: hidden 4s infinite;
+// }
 
 /* LOCATION */
 .location {
