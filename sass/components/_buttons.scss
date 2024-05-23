@@ -1,8 +1,11 @@
 .explore-button {
     padding: 15px 25px;
     border-radius: 70px;
+    width: 220px;
     border-style: none;
     text-decoration: none;
+    @include flexcenter;
+    font-size: 20px;
     background-image: linear-gradient($second-color, $main-color);
     color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);

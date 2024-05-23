@@ -4,3 +4,8 @@
     }
 }
 
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

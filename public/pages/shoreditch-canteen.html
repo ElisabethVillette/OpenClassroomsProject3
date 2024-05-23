@@ -20,92 +20,144 @@
 
 <body>
   <header class="logo">
-    <nav>
+    <a href="../../">
       <i class="back fa-solid fa-arrow-left"></i>
-    </nav>
+    </a>
     <img class=logo__image src="../images/logo/ohmyfood.png" alt="Logo">
   </header>
   <img class=menu__image src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Shoreditch Canteen">
   <section class="menu-and-blank">
     <section class="menu">
-      <div class="corazon">
-        <i class="fa-regular fa-heart corazon__empty"></i>
-        <i class="fa-solid fa-heart corazon__full"></i>
+      <div class="heading">
+        <h1 class="menu__title">Shoreditch Canteen</h1>
+        <div class="heart-heading">
+          <i class="fa-regular fa-heart heart-heading__empty"></i>
+          <i class="fa-solid fa-heart heart-heading__full"></i>
+        </div>
       </div>
-      <h2 class="menu__title">Shoreditch Canteen</h2>
-      <section class="starters">
-        <h3 class="category__title">Starters</h3>
-        <div class="item">
-          <div class="item__title">Tangy octopus tartare</div>
-          <div class="item__content">With orange zest</div>
-          <div class="item__price">£25</div>
-        </div>
-        <div class="item">
-          <div class="item__title">Cream of root vegetable soup</div>
-          <div class="item__content">Carrot, parsnip, Jerusalem artichoke</div>
-          <div class="item__price">£35</div>
-        </div>
-        <div class="item">
-          <div class="item__title">French onion soup</div>
-          <div class="item__content">With cheesy croutons</div>
-          <div class="item__price">£20</div>
-        </div>
-      </section>
-      <section class="mains">
-        <h3 class="category__title">Mains</h3>
-        <div class="item">
-          <div class="item__title">Scallops</div>
-          <div class="item__content">With parsnip purée</div>
-          <div class="item__price">£40</div>
-        </div>
-        <div class="item">
-          <div class="item__title">Pan-fried duck breast</div>
-          <div class="item__content">With crushed potatoes</div>
-          <div class="item__price">£35</div>
-        </div>
-        <div class="item">
-          <div class="item__title">Roasted pigeon</div>
-          <div class="item__content">Served on gnocchi and vegetables</div>
-          <div class="item__price">£44</div>
-        </div>
-      </section>
-      <section class="desserts">
-        <h3 class="category__title">Desserts</h3>
-        <div class="item">
-          <div class="item__title">Forest fruit cheesecake</div>
-          <div class="item__content">With blackcurrant sorbet</div>
-          <div class="item__price">£18</div>
-        </div>
-        <div class="item">
-          <div class="item__title">Chocolate fondant</div>
-          <div class="item__content">With clotted cream</div>
-          <div class="item__price">£22</div>
-        </div>
-        <div class="item">
-          <div class="item__title">Crispy millefeuille</div>
-          <div class="item__content">With blueberries and almonds</div>
-          <div class="item__price">£23</div>
-        </div>
-        <a class="order-button" href="#">Order</a>
-      </section>
+      <div class="courses">
+        <section class="category">
+          <h2 class="category__title">Starters</h2>
+          <div class="item">
+            <div class="item__text">
+              <h3 class="item__title">Tangy octopus tartare</h3>
+              <p class="item__content">With orange zest</p>
+            </div>
+            <span class="item__price">£25</span>
+            <div class="selection">
+              <i class="selection__mark fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__text">
+              <h3 class="item__title">Cream of root vegetable soup</h3>
+              <p class="item__content">Carrot, parsnip, Jerusalem artichoke</p>
+            </div>
+            <span class="item__price">£35</span>
+            <div class="selection">
+              <i class="selection__mark fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__text">
+              <h3 class="item__title">French onion soup</h3>
+              <p class="item__content">With cheesy croutons</p>
+            </div>
+            <span class="item__price">£20</span>
+            <div class="selection">
+              <i class="selection__mark fa-solid fa-check"></i>
+            </div>
+          </div>
+        </section>
+        <section class="category">
+          <h2 class="category__title">Mains</h2>
+          <div class="item">
+            <div class="item__text">
+              <h3 class="item__title">Scallops</h3>
+              <p class="item__content">With parsnip purée</p>
+            </div>
+            <span class="item__price">£40</span>
+            <div class="selection">
+              <i class="selection__mark fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__text">
+              <h3 class="item__title">Pan-fried duck breast</h3>
+              <p class="item__content">With crushed potatoes</p>
+            </div>
+            <span class="item__price">£35</span>
+            <div class="selection">
+              <i class="selection__mark fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__text">
+              <h3 class="item__title">Roasted pigeon</h3>
+              <p class="item__content">Served on gnocchi and vegetables</p>
+            </div>
+            <span class="item__price">£44</span>
+            <div class="selection">
+              <i class="selection__mark fa-solid fa-check"></i>
+            </div>
+          </div>
+        </section>
+        <section class="category">
+          <h2 class="category__title">Desserts</h2>
+          <div class="item">
+            <div class="item__text">
+              <h3 class="item__title">Forest fruit cheesecake</h3>
+              <p class="item__content">With blackcurrant sorbet</p>
+            </div>
+            <span class="item__price">£18</span>
+            <div class="selection">
+              <i class="selection__mark fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__text">
+              <h3 class="item__title">Chocolate fondant</h3>
+              <p class="item__content">With clotted cream</p>
+            </div>
+            <span class="item__price">£22</span>
+            <div class="selection">
+              <i class="selection__mark fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__text">
+              <h3 class="item__title">Crispy millefeuille</h3>
+              <p class="item__content">With blueberries and almonds</p>
+            </div>
+            <span class="item__price">£23</span>
+            <div class="selection">
+              <i class="selection__mark fa-solid fa-check"></i>
+            </div>
+          </div>
+        </section>
+        <section class="order">
+          <a class="order-button" href="#">Order</a>
+        </section>
+      </div>
     </section>
   </section>
+
   <footer>
     <h2>ohmyfood</h2>
     <ul>
-      <li>
+      <li class="footer-list">
         <i class="kitchen-icon fa-solid fa-utensils"></i>
         <p>Suggest a restaurant</p>
       </li>
-      <li>
+      <li class="footer-list">
         <i class="kitchen-icon fa-solid fa-handshake-angle"></i>
         <p>Become a partner</p>
       </li>
-      <li>
+      <li class="footer-list">
         <p>Legal notice</p>
       </li>
-      <li>
-        <p>Contact</p>
+      <li class="footer-list">
+        <a href="mailto:elisabethvillette3@gmail.com">Contact</a>
       </li>
     </ul>
   </footer>

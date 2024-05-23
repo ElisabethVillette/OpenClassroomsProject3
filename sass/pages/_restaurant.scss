@@ -46,9 +46,7 @@
     top: -50px;
 
     @include desktop-only {
-        display: flex;
-        justify-content: center;
-        justify-items: center;
+        @include flexcenter;
     }
 }
 
@@ -78,6 +76,8 @@
         font-family: "Shrikhand", serif;
         font-size: 26px;
         margin: 0;
+        display: flex;
+        align-items: self-start;
 
         @include desktop-only {
             display: flex;
@@ -142,7 +142,7 @@
     color: #353535;
     margin: 10px;
     position: relative;
-    width: 90%;
+    width: 340px;
     height: 70px;
     flex-wrap: wrap;
     justify-content: start;
@@ -183,17 +183,13 @@
         position: absolute;
         margin: 0;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexcenter;
         right: 0;
         opacity: 0;
     
         &__mark {
             color: $third-color;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexcenter;
             background-color: white;
             width: 25px;
             height: 25px;
