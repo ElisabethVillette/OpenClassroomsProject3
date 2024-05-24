@@ -6,7 +6,8 @@ footer {
     justify-content: space-between;
 
     @include desktop-only{
-        padding-left: 200px;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
     }
 }
 
@@ -18,9 +19,9 @@ footer h2 {
     padding-top: 15px;
 
     @include desktop-only {
-        position: absolute;
-        right: 25px;
-        padding: 50px;
+        margin-top: 60px;
+        margin-left: 40px;
+        line-height: 50px;
     }
 }
 
@@ -33,7 +34,6 @@ footer ul {
     @include desktop-only {
         flex-direction: row;
         margin-top: 60px;
-        padding-left: 600px;
     }
 }
 

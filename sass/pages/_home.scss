@@ -5,16 +5,16 @@
 
 .spinner-container {
     background-color: $background-color;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     @include flexcenter;
     z-index: 1000;
-    height: 100%;
-    width: 100%;
-    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.5;
     animation: hidden 0s 3s forwards;
 }
 
@@ -98,6 +98,7 @@ ol {
     flex-direction: column;
     padding: 0;
     margin-left: 30px;
+    align-items: center;
 
     @include desktop-only {
         display: flex;
