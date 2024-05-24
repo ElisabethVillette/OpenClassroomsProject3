@@ -3,7 +3,7 @@
     animation-duration: 3s;
 }
 
-.spinner-container{
+.spinner-container {
     background-color: $background-color;
     position: absolute;
     top: 0;
@@ -19,8 +19,8 @@
 }
 
 .spinner {
-    border: 16px dashed $third-color; 
-    border-top: 16px dashed green; 
+    border: 16px dashed $third-color;
+    border-top: 16px dashed green;
     border-radius: 50%;
     width: 300px;
     height: 300px;
@@ -65,7 +65,7 @@ h1 {
         font-size: 24px;
         font-weight: 500;
 
-        @include desktop-only{
+        @include desktop-only {
             font-size: 42px;
             font-weight: 500;
         }
@@ -88,7 +88,7 @@ h1 {
         font-size: 28px;
 
         @include desktop-only {
-            margin-left: 290px;
+            margin-left: 190px;
         }
     }
 }
@@ -122,8 +122,8 @@ ol>li {
     margin-top: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 
-    @include desktop-only{
-        width: 340px;
+    @include desktop-only {
+        width: 280px;
         height: 60px;
         @include flexcenter;
     }
@@ -143,9 +143,9 @@ ol>li {
     background-color: $main-color;
     position: absolute;
     left: -15px;
-    width: 0.70rem;
-    height: 0.70rem;
-    padding: 0.70rem;
+    width: 0.60rem;
+    height: 0.60rem;
+    padding: 0.60rem;
     border-radius: 50%;
 }
 
@@ -165,12 +165,12 @@ ol>.how-it-works {
     border-radius: 30%;
 }
 
-li p {
-    font-size: 18px;
+.icon-text {
+    font-size: 16px;
     font-weight: 500;
 
-    @include desktop-only{
-        font-size: 20px;
+    @include desktop-only {
+        font-size: 18px;
     }
 }
 
@@ -185,15 +185,15 @@ li p {
 
     @include desktop-only {
         box-sizing: border-box;
-        padding: 100px;
+        padding: 30px;
     }
 
     &__title {
         margin-left: 20px;
         font-size: 28px;
-    
+
         @include desktop-only {
-            margin-left: 200px;
+            margin-left: 100px;
         }
     }
 }
@@ -229,8 +229,8 @@ li p {
     position: relative;
 
     @include desktop-only {
-        width: 620px;
-        height: 300px;
+        width: 520px;
+        height: 280px;
     }
 
     &__image {
@@ -294,7 +294,7 @@ li p {
         -webkit-background-clip: text;
         color: transparent;
         opacity: 0;
-        transition: opacity 500ms cubic-bezier(.17,.67,.83,.67);
+        transition: opacity 500ms cubic-bezier(.17, .67, .83, .67);
 
         &:hover {
             opacity: 1;
@@ -316,7 +316,7 @@ li p {
     color: green;
 
     @include desktop-only {
-        left: 520px;
-        bottom: 230px;
+        left: 420px;
+        bottom: 220px;
     }
 }

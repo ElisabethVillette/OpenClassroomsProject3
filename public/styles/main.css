@@ -79,13 +79,13 @@ body {
 .explore-button {
   padding: 15px 25px;
   border-radius: 70px;
-  width: 220px;
+  width: 200px;
   border-style: none;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
   background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
@@ -307,7 +307,7 @@ h1 {
 }
 @media screen and (min-width: 992px) {
   .how-it-works__title {
-    margin-left: 290px;
+    margin-left: 190px;
   }
 }
 
@@ -341,7 +341,7 @@ ol > li {
 }
 @media screen and (min-width: 992px) {
   ol > li {
-    width: 340px;
+    width: 280px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -365,9 +365,9 @@ ol > li {
   background-color: #9356DC;
   position: absolute;
   left: -15px;
-  width: 0.7rem;
-  height: 0.7rem;
-  padding: 0.7rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  padding: 0.6rem;
   border-radius: 50%;
 }
 
@@ -387,13 +387,13 @@ ol > .how-it-works {
   border-radius: 30%;
 }
 
-li p {
-  font-size: 18px;
+.icon-text {
+  font-size: 16px;
   font-weight: 500;
 }
 @media screen and (min-width: 992px) {
-  li p {
-    font-size: 20px;
+  .icon-text {
+    font-size: 18px;
   }
 }
 
@@ -409,7 +409,7 @@ li p {
 @media screen and (min-width: 992px) {
   .restaurants {
     box-sizing: border-box;
-    padding: 100px;
+    padding: 30px;
   }
 }
 .restaurants__title {
@@ -418,7 +418,7 @@ li p {
 }
 @media screen and (min-width: 992px) {
   .restaurants__title {
-    margin-left: 200px;
+    margin-left: 100px;
   }
 }
 
@@ -455,8 +455,8 @@ li p {
 }
 @media screen and (min-width: 992px) {
   .card {
-    width: 620px;
-    height: 300px;
+    width: 520px;
+    height: 280px;
   }
 }
 .card__image {
@@ -539,8 +539,8 @@ li p {
 }
 @media screen and (min-width: 992px) {
   .new {
-    left: 520px;
-    bottom: 230px;
+    left: 420px;
+    bottom: 220px;
   }
 }
 
