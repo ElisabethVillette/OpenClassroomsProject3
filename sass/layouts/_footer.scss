@@ -8,18 +8,19 @@ footer {
     @include desktop-only{
         justify-content: flex-start;
         flex-direction: row-reverse;
+        padding-right: 30px;
     }
 }
 
 footer h2 {
     font-family: "Shrikhand", serif;
-    font-size: 22px;
+    font-size: 20px;
     margin-left: 40px;
     line-height: 15px;
     padding-top: 15px;
 
     @include desktop-only {
-        margin-top: 60px;
+        margin-top: 50px;
         margin-left: 40px;
         line-height: 50px;
     }
@@ -28,6 +29,7 @@ footer h2 {
 footer ul {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     margin: 0;
     margin-bottom: 20px;
 
@@ -41,40 +43,41 @@ footer ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
     margin: 0;
     padding: 3px;
 
     @include desktop-only {
-        gap: 20px;
+        gap: 10px;
         margin-right: 70px;
         line-height: 4px;
     }
 }
 
-.footer-list p{
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 7px;
-}
-
 .footer-list a {
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
-    padding: 3px;
+    line-height: 30px;
     text-decoration: none;
     color: white;
+
+    @include desktop-only{
+        line-height: 7px;
+    }
+}
+
+.fa-utensils {
+    padding-left: 5px;
 }
 
 .kitchen-icon{
-    font-size: small;
+    font-size: 16px;
     padding-right: 5px;
 
     @include desktop-only {
-        height: 6px;
-        line-height: 4px;
-        padding-right: 10px;
+        height: 2px;
+        line-height: 2px;
+        font-size: 16px;
     }
 }
+

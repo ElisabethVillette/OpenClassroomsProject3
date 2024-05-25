@@ -1,8 +1,9 @@
 .back {
     position: absolute;
-    right: 25px;
+    left: 25px;
     top: 25px;
     font-size: 20px;
+    color: black;
 }
 
 
@@ -77,8 +78,6 @@
         font-family: "Shrikhand", serif;
         font-size: 26px;
         margin: 0;
-        display: flex;
-        align-items: self-start;
 
         @include desktop-only {
             display: flex;
@@ -86,6 +85,7 @@
         }
     }
 }
+
 
 .courses {
     display: flex;
@@ -161,7 +161,8 @@
     }
 
     &__title {
-        font-weight: 600;
+        font-size: 18px;
+        font-weight: 500;
         margin: 0;
     }
 

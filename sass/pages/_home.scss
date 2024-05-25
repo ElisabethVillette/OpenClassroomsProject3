@@ -47,6 +47,7 @@
     color: #353535;
     width: 4%;
     height: 50px;
+    font-size: 20px;
 }
 
 /* BOOK YOUR MEAL */
@@ -86,9 +87,10 @@ h1 {
         display: flex;
         flex-direction: column;
         font-size: 28px;
+        margin-left:20px;
 
         @include desktop-only {
-            margin-left: 190px;
+            margin-left: 175px;
         }
     }
 }
@@ -96,16 +98,14 @@ h1 {
 ol {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 0;
     margin-left: 30px;
-    align-items: center;
 
     @include desktop-only {
-        display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 40px;
-        // margin-left: 100px;
     }
 }
 
@@ -154,10 +154,6 @@ ol>li {
     color: $main-color;
 }
 
-.fa-solid {
-    font-size: 24px;
-}
-
 ol>.how-it-works {
     display: inline-block;
     padding: 5px;
@@ -186,7 +182,6 @@ ol>.how-it-works {
 
     @include desktop-only {
         box-sizing: border-box;
-        padding: 30px;
     }
 
     &__title {
@@ -194,7 +189,7 @@ ol>.how-it-works {
         font-size: 28px;
 
         @include desktop-only {
-            margin-left: 100px;
+            margin-left: 175px;
         }
     }
 }
@@ -260,12 +255,12 @@ ol>.how-it-works {
 
 .card__body h3 {
     margin: 10px 15px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .card__body p {
     margin: 0px 10px 15px 15px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 100;
 }
 

@@ -135,19 +135,20 @@ footer {
   footer {
     justify-content: flex-start;
     flex-direction: row-reverse;
+    padding-right: 30px;
   }
 }
 
 footer h2 {
   font-family: "Shrikhand", serif;
-  font-size: 22px;
+  font-size: 20px;
   margin-left: 40px;
   line-height: 15px;
   padding-top: 15px;
 }
 @media screen and (min-width: 992px) {
   footer h2 {
-    margin-top: 60px;
+    margin-top: 50px;
     margin-left: 40px;
     line-height: 50px;
   }
@@ -156,6 +157,7 @@ footer h2 {
 footer ul {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -170,43 +172,44 @@ footer ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
   margin: 0;
   padding: 3px;
 }
 @media screen and (min-width: 992px) {
   .footer-list {
-    gap: 20px;
+    gap: 10px;
     margin-right: 70px;
     line-height: 4px;
   }
 }
 
-.footer-list p {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 7px;
-}
-
 .footer-list a {
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
-  padding: 3px;
+  line-height: 30px;
   text-decoration: none;
   color: white;
 }
+@media screen and (min-width: 992px) {
+  .footer-list a {
+    line-height: 7px;
+  }
+}
+
+.fa-utensils {
+  padding-left: 5px;
+}
 
 .kitchen-icon {
-  font-size: small;
+  font-size: 16px;
   padding-right: 5px;
 }
 @media screen and (min-width: 992px) {
   .kitchen-icon {
-    height: 6px;
-    line-height: 4px;
-    padding-right: 10px;
+    height: 2px;
+    line-height: 2px;
+    font-size: 16px;
   }
 }
 
@@ -264,6 +267,7 @@ footer ul {
   color: #353535;
   width: 4%;
   height: 50px;
+  font-size: 20px;
 }
 
 /* BOOK YOUR MEAL */
@@ -304,23 +308,23 @@ h1 {
   display: flex;
   flex-direction: column;
   font-size: 28px;
+  margin-left: 20px;
 }
 @media screen and (min-width: 992px) {
   .how-it-works__title {
-    margin-left: 190px;
+    margin-left: 175px;
   }
 }
 
 ol {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 0;
   margin-left: 30px;
-  align-items: center;
 }
 @media screen and (min-width: 992px) {
   ol {
-    display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 40px;
@@ -376,10 +380,6 @@ ol > li {
   color: #9356DC;
 }
 
-.fa-solid {
-  font-size: 24px;
-}
-
 ol > .how-it-works {
   display: inline-block;
   padding: 5px;
@@ -410,7 +410,6 @@ ol > .how-it-works {
 @media screen and (min-width: 992px) {
   .restaurants {
     box-sizing: border-box;
-    padding: 30px;
   }
 }
 .restaurants__title {
@@ -419,7 +418,7 @@ ol > .how-it-works {
 }
 @media screen and (min-width: 992px) {
   .restaurants__title {
-    margin-left: 100px;
+    margin-left: 175px;
   }
 }
 
@@ -486,12 +485,12 @@ ol > .how-it-works {
 
 .card__body h3 {
   margin: 10px 15px;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .card__body p {
   margin: 0px 10px 15px 15px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 100;
 }
 
@@ -547,9 +546,10 @@ ol > .how-it-works {
 
 .back {
   position: absolute;
-  right: 25px;
+  left: 25px;
   top: 25px;
   font-size: 20px;
+  color: black;
 }
 
 .heading {
@@ -624,8 +624,6 @@ ol > .how-it-works {
   font-family: "Shrikhand", serif;
   font-size: 26px;
   margin: 0;
-  display: flex;
-  align-items: self-start;
 }
 @media screen and (min-width: 992px) {
   .menu__title {
@@ -708,7 +706,8 @@ ol > .how-it-works {
   padding: 10px;
 }
 .item__title {
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   margin: 0;
 }
 .item__content {
