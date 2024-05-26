@@ -11,6 +11,10 @@
     display: flex;
     justify-content: space-between;
     width: 250px;
+
+    @include desktop-only{
+        width: 350px;
+    }
 }
 
 .heart-heading {
@@ -21,14 +25,18 @@
     &__empty {
         position: absolute;
         left: 0;
-        top: 5px;
+        top: 25px;
         font-size: 24px;
+
+        @include desktop-only {
+            top: 35px;
+        }
     }
 
     &__full {
         position: absolute;
         left: -15px;
-        top: 5px;
+        top: 25px;
         padding-left: 15px;
         background-image: linear-gradient($second-color, $main-color);
         background-clip: text;
@@ -36,6 +44,10 @@
         color: transparent;
         opacity: 0;
         transition: opacity 500ms cubic-bezier(.17, .67, .83, .67);
+
+        @include desktop-only {
+            top: 35px;
+        }
 
         &:hover {
             opacity: 1;
@@ -76,12 +88,11 @@
 
     &__title {
         font-family: "Shrikhand", serif;
-        font-size: 26px;
-        margin: 0;
+        font-size: 22px;
+        // margin: 0;
 
         @include desktop-only {
-            display: flex;
-            justify-content: center;
+            font-size: 26px;
         }
     }
 }
