@@ -555,7 +555,7 @@ ol > .how-it-works {
 .heading {
   display: flex;
   justify-content: space-between;
-  width: 200px;
+  width: 250px;
 }
 
 .heart-heading {
@@ -566,13 +566,13 @@ ol > .how-it-works {
 .heart-heading__empty {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 5px;
   font-size: 24px;
 }
 .heart-heading__full {
   position: absolute;
   left: -15px;
-  top: 0;
+  top: 5px;
   padding-left: 15px;
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
